@@ -210,3 +210,16 @@ console.log("El ejercicio 3 se ejecutó " + contadorEjTres + " veces");
 console.log("El ejercicio 4 se ejecutó " + contadorEjCuatro + " veces");
 console.log("El ejercicio 5 se ejecutó " + contadorEjCinco + " veces");
 console.log("El ejercicio 6 se ejecutó " + contadorEjSeis + " veces");
+let contadores = [
+  contadorEjUno,
+  contadorEjDos,
+  contadorEjTres,
+  contadorEjCuatro,
+  contadorEjCinco,
+  contadorEjSeis,
+];
+contadores.sort();
+console.log("El ejercicio que menos se ejecutó fue: " + contadores[0]);
+console.log(
+  "El ejercicio que mas se ejecutó fue: " + contadores[contadores.length - 1]
+);
