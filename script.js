@@ -80,6 +80,27 @@ function ejercicioTres(ladoUno, ladoDos, ladoTres) {
   }
 }
 
+function ejercicioCuatro(numeroUno, numeroDos) {
+  let contadorUno = 0;
+  let contadorDos = 0;
+  for (let i = 0; i < numeroUno; i++) {
+    if (numeroUno % i == 0) {
+      contadorUno += i;
+    }
+  }
+  for (let k = 0; k < numeroDos; k++) {
+    if (numeroDos % k == 0) {
+      contadorDos += k;
+    }
+  }
+  if (contadorDos != numeroUno) {
+    alert("Los numeros no son amigos");
+  } else if (contadorUno != numeroDos) {
+    alert("Los numeros no son amigos");
+  } else {
+    alert("Los numeros son amigos");
+  }
+}
 
 while (continuar == "si") {
   let menu = Number(
@@ -108,6 +129,9 @@ while (continuar == "si") {
       contadorEjTres++;
       break;
     case 4:
+      let numeroUno = Number(prompt("Ingrese el primer numero "));
+      let numeroDos = Number(prompt("Ingrese el segundo numero "));
+      ejercicioCuatro(numeroUno, numeroDos);
       contadorEjCuatro++;
       break;
     case 5:
