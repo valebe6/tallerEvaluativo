@@ -204,3 +204,9 @@ while (continuar == "si") {
   }
   continuar = prompt("¿Desea continuar?");
 }
+console.log("El ejercicio 1 se ejecutó " + contadorEjUno + " veces");
+console.log("El ejercicio 2 se ejecutó " + contadorEjDos + " veces");
+console.log("El ejercicio 3 se ejecutó " + contadorEjTres + " veces");
+console.log("El ejercicio 4 se ejecutó " + contadorEjCuatro + " veces");
+console.log("El ejercicio 5 se ejecutó " + contadorEjCinco + " veces");
+console.log("El ejercicio 6 se ejecutó " + contadorEjSeis + " veces");
