@@ -102,6 +102,28 @@ function ejercicioCuatro(numeroUno, numeroDos) {
   }
 }
 
+function ejercicioCinco(valor, cantidad) {
+  let total = valor * cantidad;
+  let iva = total * 0.19;
+  let descuento = total * 0.1;
+  console.log(total);
+  if (total > 500000) {
+    total = total;
+    alert("el total es: " + total);
+  } else if (total > 500000 && total < 1000000) {
+    alert("El valor total es " + total);
+    alert("El iva es " + iva);
+    alert("el valor total con descuento del iva (19%) es: " + (total - iva));
+  } else if (total > 1000000) {
+    alert(
+      "el valor total con descuento del iva (19%) y el 10% de descuento es: " +
+        (total - iva - descuento)
+    );
+  }
+}
+
+
+
 while (continuar == "si") {
   let menu = Number(
     prompt(
@@ -135,6 +157,9 @@ while (continuar == "si") {
       contadorEjCuatro++;
       break;
     case 5:
+      let valor = Number(prompt("Ingrese el valor"));
+      let cantidad = Number(prompt("Ingrese la cantidad"));
+      ejercicioCinco(valor, cantidad);
       contadorEjCinco++;
       break;
     case 6:
