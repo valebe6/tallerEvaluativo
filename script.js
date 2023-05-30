@@ -63,6 +63,23 @@ function ejercicioDos(radio) {
   alert("El area del circulo es " + 3.1416 * (radio * radio));
 }
 
+function ejercicioTres(ladoUno, ladoDos, ladoTres) {
+  if (ladoUno == ladoDos && ladoUno == ladoTres) {
+    alert("El triangulo es equilatero");
+  } else if (
+    (ladoUno == ladoDos && ladoUno !== ladoTres) ||
+    (ladoDos == ladoTres && ladoUno != ladoDos)
+  ) {
+    alert("El triangulo es isóceles");
+  } else if (
+    ladoUno !== ladoDos &&
+    ladoUno !== ladoTres &&
+    ladoDos != ladoTres
+  ) {
+    alert("El triangulo es escaleno");
+  }
+}
+
 
 while (continuar == "si") {
   let menu = Number(
@@ -84,6 +101,10 @@ while (continuar == "si") {
       contadorEjDos++;
       break;
     case 3:
+      let ladoUno = Number(prompt("Ingrese el lado Uno"));
+      let ladoDos = Number(prompt("Ingrese el lado Dos"));
+      let ladoTres = Number(prompt("Ingrese el lado tres"));
+      ejercicioTres(ladoUno, ladoDos, ladoTres);
       contadorEjTres++;
       break;
     case 4:
