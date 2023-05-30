@@ -122,7 +122,25 @@ function ejercicioCinco(valor, cantidad) {
   }
 }
 
+function ejercicioSeis(notas) {
+  let porcentaje = 0.1;
+  let notaFinal = 0;
 
+  if (notas[notas.length - 1] == 5) {
+    for (let i = 0; i < notas.length - 1; i++) {
+      notas[i] = notas[i] + 1;
+    }
+  }
+  for (let nota of notas) {
+    notaFinal += nota * porcentaje;
+    porcentaje += 0.1;
+  }
+  if (notaFinal > 3.5) {
+    alert("Ganó");
+  } else {
+    alert("Perdió");
+  }
+}
 
 while (continuar == "si") {
   let menu = Number(
@@ -164,6 +182,17 @@ while (continuar == "si") {
       break;
     case 6:
       let notas = [];
+      for (let i = 0; i < 4; i++) {
+        let nota = Number(prompt("Ingrese la nota " + (i + 1)));
+
+        if (nota > 5) {
+          alert("Las notas deben ser entre 1 y 5");
+          i--;
+        } else {
+          notas[i] = nota;
+        }
+      }
+      ejercicioSeis(notas);
 
       contadorEjSeis++;
       break;
