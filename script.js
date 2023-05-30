@@ -63,44 +63,45 @@ function ejercicioDos(radio) {
   alert("El area del circulo es " + 3.1416 * (radio * radio));
 }
 
+
 while (continuar == "si") {
-    let menu = Number(
-      prompt(
-        "Ingrese el numero del ejercicio que desea ver \nEjercicio 1\nEjercicio 2\nEjercicio 3\nEjercicio 4\nEjercicio 5\nEjercicio 6"
-      )
-    );
-    switch (menu) {
-      case 1:
-        let primerNumero = Number(prompt("Ingrese el primer numero"));
-        let segundoNumero = Number(prompt("Ingrese el segundo numero"));
-        let tercerNumero = Number(prompt("Ingrese el tercer numero"));
-        ejercicioUno(primerNumero, segundoNumero, tercerNumero);
-        contadorEjUno++;
-        break;
-      case 2:
+  let menu = Number(
+    prompt(
+      "Ingrese el numero del ejercicio que desea ver \nEjercicio 1\nEjercicio 2\nEjercicio 3\nEjercicio 4\nEjercicio 5\nEjercicio 6"
+    )
+  );
+  switch (menu) {
+    case 1:
+      let primerNumero = Number(prompt("Ingrese el primer numero"));
+      let segundoNumero = Number(prompt("Ingrese el segundo numero"));
+      let tercerNumero = Number(prompt("Ingrese el tercer numero"));
+      ejercicioUno(primerNumero, segundoNumero, tercerNumero);
+      contadorEjUno++;
+      break;
+    case 2:
+      let radio = Number(prompt("Ingrese el radio del ciculo"));
+      ejercicioDos(radio);
+      contadorEjDos++;
+      break;
+    case 3:
+      contadorEjTres++;
+      break;
+    case 4:
+      contadorEjCuatro++;
+      break;
+    case 5:
+      contadorEjCinco++;
+      break;
+    case 6:
+      let notas = [];
 
-        contadorEjDos++;
-        break;
-      case 3:
-
-        contadorEjTres++;
-        break;
-      case 4:
-
-
-        contadorEjCuatro++;
-        break;
-      case 5:
-
-        contadorEjCinco++;
-        break;
-      case 6:
-
-        contadorEjSeis++;
-        break;
-      default:
-        alert("El ejercicio seleccionado no existe, por favor seleccione del 1 al 6.")
-        break;
-    }
-    continuar = prompt("¿Desea continuar?");
+      contadorEjSeis++;
+      break;
+    default:
+      alert(
+        "El ejercicio eleccionado no existe, por fvor seleccione del 1 al 6."
+      );
+      break;
   }
+  continuar = prompt("¿Desea continuar?");
+}
